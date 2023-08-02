@@ -29,7 +29,7 @@ const Home = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("https://task-up.onrender.com/", { title, desc, status }
+      await axios.post("https://task-up.onrender.com/api/tasks/", { title, desc, status }
       );
       setTitle("");
       setDesc("");
@@ -43,7 +43,7 @@ const Home = () => {
   //deleting the data
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://task-up.onrender.com/${id}`);
+      await axios.delete(`https://task-up.onrender.com/api/tasks/${id}`);
       fetchTaskList();
     } catch (error) {
       console.error("Error deleting task:", error);
