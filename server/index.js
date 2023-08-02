@@ -6,7 +6,7 @@ const Route=require("./routes")
 
 
 dotenv.config();
-
+const PORT= process.env.PORT || 8800
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
@@ -17,7 +17,7 @@ mongoose
   
 app.use("/api/tasks",Route);
 
-/*app.listen(8800,()=>{
-    console.log("app running")
+app.listen(PORT,()=>{
+    console.log(`app running on ${PORT}`)
 })
-*/
+
