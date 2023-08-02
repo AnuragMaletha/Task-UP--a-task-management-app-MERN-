@@ -5,7 +5,9 @@ const dotenv =require("dotenv");
 const Route=require("./routes")
 const cors = require("cors")
 
-app.use(cors())
+app.use(cors({
+  origin:"https://fancy-stroopwafel-61fa38.netlify.app"
+}))
 
 
 dotenv.config();

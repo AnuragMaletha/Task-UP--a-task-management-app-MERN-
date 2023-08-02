@@ -19,7 +19,7 @@ const Home = () => {
   const fetchTaskList = async () => {
     try {
 
-      const response = await axios.get("http://localhost:8800/api/tasks");
+      const response = await axios.get("/api/tasks");
       setTaskList(response.data);
     } catch (error) {
       console.error("Error fetching task list:", error);
@@ -30,7 +30,7 @@ const Home = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:8800/api/tasks", { title, desc, status }
+      await axios.post("/api/tasks", { title, desc, status }
       );
       setTitle("");
       setDesc("");
@@ -44,7 +44,7 @@ const Home = () => {
   //deleting the data
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8800/api/tasks/${id}`);
+      await axios.delete(`/api/tasks/${id}`);
       fetchTaskList();
     } catch (error) {
       console.error("Error deleting task:", error);
