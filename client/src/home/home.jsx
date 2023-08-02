@@ -64,7 +64,7 @@ const Home = () => {
         <source src="https://vod-progressive.akamaized.net/exp=1690982440~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1631%2F12%2F308156997%2F1184393755.mp4~hmac=4b9385f6981b0d50c0b9cb219978957093a2b8aa6bb22ce0821f390025dbd3a8/vimeo-prod-skyfire-std-us/01/1631/12/308156997/1184393755.mp4" type="video/mp4" />
       </video>
       <h1 className="title">TASK UP</h1>
-      <h5 className="extra">a task management app</h5>
+      <h5 className="extra">a task management app ©</h5>
 
       {/* Creating a form to allow users to enter title desc and status  */}
       <form className="task-form" onSubmit={handleSubmit} >
