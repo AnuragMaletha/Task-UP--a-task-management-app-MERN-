@@ -18,8 +18,7 @@ const Home = () => {
   //fetching the data
   const fetchTaskList = async () => {
     try {
-
-      const response = await axios.get("/api/tasks");
+      const response = await axios.get("https://task-up.onrender.com/");
       setTaskList(response.data);
     } catch (error) {
       console.error("Error fetching task list:", error);
@@ -30,7 +29,7 @@ const Home = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("/api/tasks", { title, desc, status }
+      await axios.post("https://task-up.onrender.com/", { title, desc, status }
       );
       setTitle("");
       setDesc("");
@@ -44,7 +43,7 @@ const Home = () => {
   //deleting the data
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/tasks/${id}`);
+      await axios.delete(`https://task-up.onrender.com/${id}`);
       fetchTaskList();
     } catch (error) {
       console.error("Error deleting task:", error);
