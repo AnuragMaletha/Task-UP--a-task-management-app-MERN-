@@ -5,9 +5,7 @@ const dotenv =require("dotenv");
 const Route=require("./routes")
 const cors = require("cors")
 
-app.use(cors({
-  origin:"http://localhost:5173"
-}))
+app.use(cors())
 
 
 dotenv.config();
