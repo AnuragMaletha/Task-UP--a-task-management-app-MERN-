@@ -16,7 +16,7 @@ function Update() {
     event.preventDefault();
     console.log(id);
     try {
-      await axios.put(`/api/tasks/${id}`, { title, desc, status });
+      await axios.put(`http://localhost:8800/api/tasks/${id}`, { title, desc, status });
     } catch (error) {
       console.error('Error saving task:', error);
     }

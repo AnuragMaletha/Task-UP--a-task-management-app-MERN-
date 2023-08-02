@@ -3,6 +3,11 @@ const app=express();
 const mongoose =require("mongoose");
 const dotenv =require("dotenv");
 const Route=require("./routes")
+const cors = require("cors")
+
+app.use(cors({
+  origin:"http://localhost:5173"
+}))
 
 
 dotenv.config();
