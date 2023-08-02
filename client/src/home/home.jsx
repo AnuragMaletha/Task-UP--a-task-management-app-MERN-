@@ -18,7 +18,7 @@ const Home = () => {
   //fetching the data
   const fetchTaskList = async () => {
     try {
-      const response = await axios.get("https://task-up.onrender.com/");
+      const response = await axios.get("https://task-up.onrender.com/api/tasks/");
       setTaskList(response.data);
     } catch (error) {
       console.error("Error fetching task list:", error);
