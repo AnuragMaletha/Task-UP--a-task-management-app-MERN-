@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/api/*"
+  to = "https://task-up.onrender.com/api"
+  status = 200
